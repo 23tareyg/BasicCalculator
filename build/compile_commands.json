@@ -1,17 +1,17 @@
 [
 {
-  "directory": "/home/tareyg/devstuff/sfmltest/build/include",
-  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/sfmltest/src/include -g -o CMakeFiles/SFML_Project.dir/main.cpp.o -c /home/tareyg/devstuff/sfmltest/src/main.cpp",
-  "file": "/home/tareyg/devstuff/sfmltest/src/main.cpp"
+  "directory": "/home/tareyg/devstuff/BasicCalculator/build/include",
+  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/BasicCalculator/src/include -g -o CMakeFiles/BasicCalculator.dir/main.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/main.cpp",
+  "file": "/home/tareyg/devstuff/BasicCalculator/src/main.cpp"
 },
 {
-  "directory": "/home/tareyg/devstuff/sfmltest/build/include",
-  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/sfmltest/src/include -g -o CMakeFiles/SFML_Project.dir/Calculator.cpp.o -c /home/tareyg/devstuff/sfmltest/src/Calculator.cpp",
-  "file": "/home/tareyg/devstuff/sfmltest/src/Calculator.cpp"
+  "directory": "/home/tareyg/devstuff/BasicCalculator/build/include",
+  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/BasicCalculator/src/include -g -o CMakeFiles/BasicCalculator.dir/Calculator.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp",
+  "file": "/home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp"
 },
 {
-  "directory": "/home/tareyg/devstuff/sfmltest/build/include",
-  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/sfmltest/src/include -g -o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -c /home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp",
-  "file": "/home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp"
+  "directory": "/home/tareyg/devstuff/BasicCalculator/build/include",
+  "command": "/usr/bin/g++  -I/home/tareyg/devstuff/BasicCalculator/src/include -g -o CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp",
+  "file": "/home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp"
 }
 ]

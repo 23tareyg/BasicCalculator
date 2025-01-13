@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tareyg/devstuff/sfmltest
+CMAKE_SOURCE_DIR = /home/tareyg/devstuff/BasicCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tareyg/devstuff/sfmltest/build
+CMAKE_BINARY_DIR = /home/tareyg/devstuff/BasicCalculator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/tareyg/devstuff/sfmltest/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/tareyg/devstuff/sfmltest/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tareyg/devstuff/BasicCalculator/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/tareyg/devstuff/sfmltest/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tareyg/devstuff/sfmltest/build/CPackSourceConfig.cmake
+	cd /home/tareyg/devstuff/BasicCalculator/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tareyg/devstuff/BasicCalculator/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tareyg/devstuff/sfmltest/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles /home/tareyg/devstuff/sfmltest/build/include//CMakeFiles/progress.marks
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles 0
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles /home/tareyg/devstuff/BasicCalculator/build/include//CMakeFiles/progress.marks
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/clean
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,39 +168,39 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tareyg/devstuff/sfmltest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-include/CMakeFiles/SFML_Project.dir/rule:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/SFML_Project.dir/rule
-.PHONY : include/CMakeFiles/SFML_Project.dir/rule
+include/CMakeFiles/BasicCalculator.dir/rule:
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/BasicCalculator.dir/rule
+.PHONY : include/CMakeFiles/BasicCalculator.dir/rule
 
 # Convenience name for target.
-SFML_Project: include/CMakeFiles/SFML_Project.dir/rule
-.PHONY : SFML_Project
+BasicCalculator: include/CMakeFiles/BasicCalculator.dir/rule
+.PHONY : BasicCalculator
 
 # fast build rule for target.
-SFML_Project/fast:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/build
-.PHONY : SFML_Project/fast
+BasicCalculator/fast:
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/build
+.PHONY : BasicCalculator/fast
 
 Calculator.o: Calculator.cpp.o
 .PHONY : Calculator.o
 
 # target to build an object file
 Calculator.cpp.o:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.o
 .PHONY : Calculator.cpp.o
 
 Calculator.i: Calculator.cpp.i
@@ -208,7 +208,7 @@ Calculator.i: Calculator.cpp.i
 
 # target to preprocess a source file
 Calculator.cpp.i:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/Calculator.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.i
 .PHONY : Calculator.cpp.i
 
 Calculator.s: Calculator.cpp.s
@@ -216,7 +216,7 @@ Calculator.s: Calculator.cpp.s
 
 # target to generate assembly for a file
 Calculator.cpp.s:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/Calculator.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.s
 .PHONY : Calculator.cpp.s
 
 DrawCalculator.o: DrawCalculator.cpp.o
@@ -224,7 +224,7 @@ DrawCalculator.o: DrawCalculator.cpp.o
 
 # target to build an object file
 DrawCalculator.cpp.o:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.o
 .PHONY : DrawCalculator.cpp.o
 
 DrawCalculator.i: DrawCalculator.cpp.i
@@ -232,7 +232,7 @@ DrawCalculator.i: DrawCalculator.cpp.i
 
 # target to preprocess a source file
 DrawCalculator.cpp.i:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.i
 .PHONY : DrawCalculator.cpp.i
 
 DrawCalculator.s: DrawCalculator.cpp.s
@@ -240,7 +240,7 @@ DrawCalculator.s: DrawCalculator.cpp.s
 
 # target to generate assembly for a file
 DrawCalculator.cpp.s:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.s
 .PHONY : DrawCalculator.cpp.s
 
 main.o: main.cpp.o
@@ -248,7 +248,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/main.cpp.o
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -256,7 +256,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/main.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -264,7 +264,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/tareyg/devstuff/sfmltest/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/main.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... SFML_Project"
+	@echo "... BasicCalculator"
 	@echo "... Calculator.o"
 	@echo "... Calculator.i"
 	@echo "... Calculator.s"
@@ -302,6 +302,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tareyg/devstuff/sfmltest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

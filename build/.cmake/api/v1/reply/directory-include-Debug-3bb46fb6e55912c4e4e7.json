@@ -30,9 +30,9 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"/home/tareyg/devstuff/sfmltest/bin/SFML_Project"
+				"/home/tareyg/devstuff/BasicCalculator/bin/BasicCalculator"
 			],
-			"targetId" : "SFML_Project::@14b3099d61bfdbeae804",
+			"targetId" : "BasicCalculator::@14b3099d61bfdbeae804",
 			"targetIndex" : 0,
 			"type" : "target"
 		}

@@ -2,6 +2,42 @@
 	"entries" : 
 	[
 		{
+			"name" : "BasicCalculator_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/tareyg/devstuff/BasicCalculator/build"
+		},
+		{
+			"name" : "BasicCalculator_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "BasicCalculator_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/tareyg/devstuff/BasicCalculator"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -55,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tareyg/devstuff/sfmltest/build"
+			"value" : "/home/tareyg/devstuff/BasicCalculator/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -595,7 +631,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tareyg/devstuff/sfmltest"
+			"value" : "/home/tareyg/devstuff/BasicCalculator"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -839,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "SFML_Projects"
+			"value" : "BasicCalculator"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1735,7 +1771,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tareyg/devstuff/sfmltest/build/include"
+			"value" : "/home/tareyg/devstuff/BasicCalculator/build/include"
 		},
 		{
 			"name" : "SFML_Project_IS_TOP_LEVEL",
@@ -1759,43 +1795,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tareyg/devstuff/sfmltest/src"
-		},
-		{
-			"name" : "SFML_Projects_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/tareyg/devstuff/sfmltest/build"
-		},
-		{
-			"name" : "SFML_Projects_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "SFML_Projects_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/tareyg/devstuff/sfmltest"
+			"value" : "/home/tareyg/devstuff/BasicCalculator/src"
 		},
 		{
 			"name" : "SFML_SYSTEM_LIBRARY",

@@ -52,5 +52,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "include/CMakeFiles/SFML_Project.dir/DependInfo.cmake"
+  "include/CMakeFiles/BasicCalculator.dir/DependInfo.cmake"
   )

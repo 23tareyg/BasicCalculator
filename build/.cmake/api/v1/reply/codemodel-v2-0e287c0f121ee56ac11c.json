@@ -22,7 +22,7 @@
 				{
 					"build" : "include",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-include-Debug-0fe3bb2a97dfdd41ae85.json",
+					"jsonFile" : "directory-include-Debug-3bb46fb6e55912c4e4e7.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.6"
@@ -48,7 +48,7 @@
 					[
 						0
 					],
-					"name" : "SFML_Projects"
+					"name" : "BasicCalculator"
 				},
 				{
 					"directoryIndexes" : 
@@ -67,9 +67,9 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "SFML_Project::@14b3099d61bfdbeae804",
-					"jsonFile" : "target-SFML_Project-Debug-a0fb495611665a4ef761.json",
-					"name" : "SFML_Project",
+					"id" : "BasicCalculator::@14b3099d61bfdbeae804",
+					"jsonFile" : "target-BasicCalculator-Debug-59acced87713015eaf87.json",
+					"name" : "BasicCalculator",
 					"projectIndex" : 1
 				}
 			]
@@ -78,8 +78,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/tareyg/devstuff/sfmltest/build",
-		"source" : "/home/tareyg/devstuff/sfmltest"
+		"build" : "/home/tareyg/devstuff/BasicCalculator/build",
+		"source" : "/home/tareyg/devstuff/BasicCalculator"
 	},
 	"version" : 
 	{

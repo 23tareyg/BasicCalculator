@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tareyg/devstuff/sfmltest/src/Calculator.cpp" "include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o.d"
-  "/home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp" "include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o.d"
-  "/home/tareyg/devstuff/sfmltest/src/main.cpp" "include/CMakeFiles/SFML_Project.dir/main.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/main.cpp.o.d"
+  "/home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp" "include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o.d"
+  "/home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp" "include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o.d"
+  "/home/tareyg/devstuff/BasicCalculator/src/main.cpp" "include/CMakeFiles/SFML_Project.dir/main.cpp.o" "gcc" "include/CMakeFiles/SFML_Project.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

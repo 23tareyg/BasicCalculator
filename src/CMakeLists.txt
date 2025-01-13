@@ -21,7 +21,7 @@ set(myproject_VERSION_MINOR 0)
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
 # Define sources and executable
-set(EXECUTABLE_NAME "SFML_Project")
+set(EXECUTABLE_NAME "BasicCalculator")
 add_executable(${EXECUTABLE_NAME} main.cpp Calculator.cpp DrawCalculator.cpp)
 
 

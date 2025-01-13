@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/tareyg/devstuff/sfmltest/bin/SFML_Project"
+			"path" : "/home/tareyg/devstuff/BasicCalculator/bin/BasicCalculator"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/tareyg/devstuff/sfmltest/src/include"
+					"path" : "/home/tareyg/devstuff/BasicCalculator/src/include"
 				}
 			],
 			"language" : "CXX",
@@ -68,7 +68,7 @@
 			]
 		}
 	],
-	"id" : "SFML_Project::@14b3099d61bfdbeae804",
+	"id" : "BasicCalculator::@14b3099d61bfdbeae804",
 	"install" : 
 	{
 		"destinations" : 
@@ -118,8 +118,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "SFML_Project",
-	"nameOnDisk" : "SFML_Project",
+	"name" : "BasicCalculator",
+	"nameOnDisk" : "BasicCalculator",
 	"paths" : 
 	{
 		"build" : "include",

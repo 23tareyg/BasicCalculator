@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/BasicCalculator.dir/main.cpp.o CMakeFiles/BasicCalculator.dir/Calculator.cpp.o CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.o -o ../../bin/BasicCalculator  -lsfml-network -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system 

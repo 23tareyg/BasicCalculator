@@ -154,8 +154,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/tareyg/devstuff/sfmltest/build",
-		"source" : "/home/tareyg/devstuff/sfmltest"
+		"build" : "/home/tareyg/devstuff/BasicCalculator/build",
+		"source" : "/home/tareyg/devstuff/BasicCalculator"
 	},
 	"version" : 
 	{

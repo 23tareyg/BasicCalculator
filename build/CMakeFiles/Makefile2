@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tareyg/devstuff/sfmltest
+CMAKE_SOURCE_DIR = /home/tareyg/devstuff/BasicCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tareyg/devstuff/sfmltest/build
+CMAKE_BINARY_DIR = /home/tareyg/devstuff/BasicCalculator/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -78,7 +78,7 @@ clean: include/clean
 # Directory level rules for directory include
 
 # Recursive "all" directory target.
-include/all: include/CMakeFiles/SFML_Project.dir/all
+include/all: include/CMakeFiles/BasicCalculator.dir/all
 .PHONY : include/all
 
 # Recursive "preinstall" directory target.
@@ -86,34 +86,34 @@ include/preinstall:
 .PHONY : include/preinstall
 
 # Recursive "clean" directory target.
-include/clean: include/CMakeFiles/SFML_Project.dir/clean
+include/clean: include/CMakeFiles/BasicCalculator.dir/clean
 .PHONY : include/clean
 
 #=============================================================================
-# Target rules for target include/CMakeFiles/SFML_Project.dir
+# Target rules for target include/CMakeFiles/BasicCalculator.dir
 
 # All Build rule for target.
-include/CMakeFiles/SFML_Project.dir/all:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/depend
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tareyg/devstuff/sfmltest/build/CMakeFiles --progress-num=1,2,3,4 "Built target SFML_Project"
-.PHONY : include/CMakeFiles/SFML_Project.dir/all
+include/CMakeFiles/BasicCalculator.dir/all:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/depend
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tareyg/devstuff/BasicCalculator/build/CMakeFiles --progress-num=1,2,3,4 "Built target BasicCalculator"
+.PHONY : include/CMakeFiles/BasicCalculator.dir/all
 
 # Build rule for subdir invocation for target.
-include/CMakeFiles/SFML_Project.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/SFML_Project.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles 0
-.PHONY : include/CMakeFiles/SFML_Project.dir/rule
+include/CMakeFiles/BasicCalculator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/BasicCalculator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles 0
+.PHONY : include/CMakeFiles/BasicCalculator.dir/rule
 
 # Convenience name for target.
-SFML_Project: include/CMakeFiles/SFML_Project.dir/rule
-.PHONY : SFML_Project
+BasicCalculator: include/CMakeFiles/BasicCalculator.dir/rule
+.PHONY : BasicCalculator
 
 # clean rule for target.
-include/CMakeFiles/SFML_Project.dir/clean:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/clean
-.PHONY : include/CMakeFiles/SFML_Project.dir/clean
+include/CMakeFiles/BasicCalculator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/clean
+.PHONY : include/CMakeFiles/BasicCalculator.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/tareyg/devstuff/sfmltest/src/include
+CXX_INCLUDES = -I/home/tareyg/devstuff/BasicCalculator/src/include
 
 CXX_FLAGS = -g
 

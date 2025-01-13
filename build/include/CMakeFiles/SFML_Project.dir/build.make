@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tareyg/devstuff/sfmltest
+CMAKE_SOURCE_DIR = /home/tareyg/devstuff/BasicCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tareyg/devstuff/sfmltest/build
+CMAKE_BINARY_DIR = /home/tareyg/devstuff/BasicCalculator/build
 
 # Include any dependencies generated for this target.
 include include/CMakeFiles/SFML_Project.dir/depend.make
@@ -72,44 +72,44 @@ include include/CMakeFiles/SFML_Project.dir/flags.make
 include/CMakeFiles/SFML_Project.dir/main.cpp.o: include/CMakeFiles/SFML_Project.dir/flags.make
 include/CMakeFiles/SFML_Project.dir/main.cpp.o: ../src/main.cpp
 include/CMakeFiles/SFML_Project.dir/main.cpp.o: include/CMakeFiles/SFML_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/sfmltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object include/CMakeFiles/SFML_Project.dir/main.cpp.o"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/main.cpp.o -MF CMakeFiles/SFML_Project.dir/main.cpp.o.d -o CMakeFiles/SFML_Project.dir/main.cpp.o -c /home/tareyg/devstuff/sfmltest/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/BasicCalculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object include/CMakeFiles/SFML_Project.dir/main.cpp.o"
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/main.cpp.o -MF CMakeFiles/SFML_Project.dir/main.cpp.o.d -o CMakeFiles/SFML_Project.dir/main.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/main.cpp
 
 include/CMakeFiles/SFML_Project.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Project.dir/main.cpp.i"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/sfmltest/src/main.cpp > CMakeFiles/SFML_Project.dir/main.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/BasicCalculator/src/main.cpp > CMakeFiles/SFML_Project.dir/main.cpp.i
 
 include/CMakeFiles/SFML_Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Project.dir/main.cpp.s"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/sfmltest/src/main.cpp -o CMakeFiles/SFML_Project.dir/main.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/BasicCalculator/src/main.cpp -o CMakeFiles/SFML_Project.dir/main.cpp.s
 
 include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o: include/CMakeFiles/SFML_Project.dir/flags.make
 include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o: ../src/Calculator.cpp
 include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o: include/CMakeFiles/SFML_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/sfmltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o -MF CMakeFiles/SFML_Project.dir/Calculator.cpp.o.d -o CMakeFiles/SFML_Project.dir/Calculator.cpp.o -c /home/tareyg/devstuff/sfmltest/src/Calculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/BasicCalculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o"
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/Calculator.cpp.o -MF CMakeFiles/SFML_Project.dir/Calculator.cpp.o.d -o CMakeFiles/SFML_Project.dir/Calculator.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp
 
 include/CMakeFiles/SFML_Project.dir/Calculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Project.dir/Calculator.cpp.i"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/sfmltest/src/Calculator.cpp > CMakeFiles/SFML_Project.dir/Calculator.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp > CMakeFiles/SFML_Project.dir/Calculator.cpp.i
 
 include/CMakeFiles/SFML_Project.dir/Calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Project.dir/Calculator.cpp.s"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/sfmltest/src/Calculator.cpp -o CMakeFiles/SFML_Project.dir/Calculator.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/BasicCalculator/src/Calculator.cpp -o CMakeFiles/SFML_Project.dir/Calculator.cpp.s
 
 include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o: include/CMakeFiles/SFML_Project.dir/flags.make
 include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o: ../src/DrawCalculator.cpp
 include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o: include/CMakeFiles/SFML_Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/sfmltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -MF CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o.d -o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -c /home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tareyg/devstuff/BasicCalculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o"
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -MF CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o.d -o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -c /home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp
 
 include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.i"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp > CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.i
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp > CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.i
 
 include/CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.s"
-	cd /home/tareyg/devstuff/sfmltest/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/sfmltest/src/DrawCalculator.cpp -o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.s
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tareyg/devstuff/BasicCalculator/src/DrawCalculator.cpp -o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.s
 
 # Object files for target SFML_Project
 SFML_Project_OBJECTS = \
@@ -130,18 +130,18 @@ SFML_Project_EXTERNAL_OBJECTS =
 ../bin/SFML_Project: /usr/lib/x86_64-linux-gnu/libsfml-window.so
 ../bin/SFML_Project: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 ../bin/SFML_Project: include/CMakeFiles/SFML_Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tareyg/devstuff/sfmltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/SFML_Project"
-	cd /home/tareyg/devstuff/sfmltest/build/include && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SFML_Project.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tareyg/devstuff/BasicCalculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/SFML_Project"
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SFML_Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 include/CMakeFiles/SFML_Project.dir/build: ../bin/SFML_Project
 .PHONY : include/CMakeFiles/SFML_Project.dir/build
 
 include/CMakeFiles/SFML_Project.dir/clean:
-	cd /home/tareyg/devstuff/sfmltest/build/include && $(CMAKE_COMMAND) -P CMakeFiles/SFML_Project.dir/cmake_clean.cmake
+	cd /home/tareyg/devstuff/BasicCalculator/build/include && $(CMAKE_COMMAND) -P CMakeFiles/SFML_Project.dir/cmake_clean.cmake
 .PHONY : include/CMakeFiles/SFML_Project.dir/clean
 
 include/CMakeFiles/SFML_Project.dir/depend:
-	cd /home/tareyg/devstuff/sfmltest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tareyg/devstuff/sfmltest /home/tareyg/devstuff/sfmltest/src /home/tareyg/devstuff/sfmltest/build /home/tareyg/devstuff/sfmltest/build/include /home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/SFML_Project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tareyg/devstuff/BasicCalculator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tareyg/devstuff/BasicCalculator /home/tareyg/devstuff/BasicCalculator/src /home/tareyg/devstuff/BasicCalculator/build /home/tareyg/devstuff/BasicCalculator/build/include /home/tareyg/devstuff/BasicCalculator/build/include/CMakeFiles/SFML_Project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : include/CMakeFiles/SFML_Project.dir/depend
 

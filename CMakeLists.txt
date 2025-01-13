@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(SFML_Projects)
+project(BasicCalculator)
 add_subdirectory(src include)

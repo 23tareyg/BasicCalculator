@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tareyg/devstuff/sfmltest
+CMAKE_SOURCE_DIR = /home/tareyg/devstuff/BasicCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tareyg/devstuff/sfmltest/build
+CMAKE_BINARY_DIR = /home/tareyg/devstuff/BasicCalculator/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tareyg/devstuff/sfmltest/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tareyg/devstuff/BasicCalculator/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles /home/tareyg/devstuff/sfmltest/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles /home/tareyg/devstuff/BasicCalculator/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/sfmltest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tareyg/devstuff/BasicCalculator/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -182,17 +182,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SFML_Project
+# Target rules for targets named BasicCalculator
 
 # Build rule for target.
-SFML_Project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SFML_Project
-.PHONY : SFML_Project
+BasicCalculator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BasicCalculator
+.PHONY : BasicCalculator
 
 # fast build rule for target.
-SFML_Project/fast:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/SFML_Project.dir/build.make include/CMakeFiles/SFML_Project.dir/build
-.PHONY : SFML_Project/fast
+BasicCalculator/fast:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/BasicCalculator.dir/build.make include/CMakeFiles/BasicCalculator.dir/build
+.PHONY : BasicCalculator/fast
 
 # Help Target
 help:
@@ -208,7 +208,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... SFML_Project"
+	@echo "... BasicCalculator"
 .PHONY : help
 
 
