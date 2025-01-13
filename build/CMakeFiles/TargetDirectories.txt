@@ -1,0 +1,17 @@
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/package.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/package_source.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/edit_cache.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/rebuild_cache.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/list_install_components.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/install.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/install/local.dir
+/home/tareyg/devstuff/sfmltest/build/CMakeFiles/install/strip.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/SFML_Project.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/package.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/package_source.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/edit_cache.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/rebuild_cache.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/list_install_components.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/install.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/install/local.dir
+/home/tareyg/devstuff/sfmltest/build/include/CMakeFiles/install/strip.dir

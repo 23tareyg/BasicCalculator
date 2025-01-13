@@ -1,17 +1,18 @@
-#include "config.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
+
+#include "../include/Calculator.h"
+#include "../include/DrawCalculator.h"
+
 using namespace std;
 
-/* Basic project example */
+
 
 int main() {
 
-    /* Code adapted from the SFML 2 "Window" example */
+    std::string expr;
 
-    cout << "Version " << myproject_VERSION_MAJOR << "." << myproject_VERSION_MINOR << endl;
-
-    sf::Window App(sf::VideoMode(800, 600), "SFML_Project");
+    sf::RenderWindow App(sf::VideoMode(600, 1000), "SFML_Project");
 
     while (App.isOpen()) {
         sf::Event Event;
@@ -19,6 +20,28 @@ int main() {
             if (Event.type == sf::Event::Closed)
             App.close();
         }
+        App.clear(sf::Color::Black);
+
+        DrawCalculator c(App);
+        c.drawAll();
+
+        // MAIN LOGIC FOR CALCULATOR
+        sf::Mouse m;
+        Calculator calc(expr, App, m);
+        calc.handlePress();
+        expr = calc.loadExpression();
+        
+
+       sf::Font font;
+       font.loadFromFile("../resources/Quen.ttf");
+
+       sf::Text text;
+       text.setFont(font);
+       text.setCharacterSize(60);
+       text.setString(calc.loadExpression());
+       App.draw(text);
+
+
         App.display();
     }
 }

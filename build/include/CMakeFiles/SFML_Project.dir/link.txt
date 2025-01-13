@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/SFML_Project.dir/main.cpp.o CMakeFiles/SFML_Project.dir/Calculator.cpp.o CMakeFiles/SFML_Project.dir/DrawCalculator.cpp.o -o ../../bin/SFML_Project  -lsfml-network -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system 

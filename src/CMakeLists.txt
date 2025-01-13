@@ -17,15 +17,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 # Set version information in a config.h file
 set(myproject_VERSION_MAJOR 1)
 set(myproject_VERSION_MINOR 0)
-configure_file(
-  "${PROJECT_SOURCE_DIR}/config.h.in"
-  "${PROJECT_BINARY_DIR}/config.h"
-  )
-include_directories("${PROJECT_BINARY_DIR}")
+
+include_directories("${PROJECT_SOURCE_DIR}/include")
 
 # Define sources and executable
 set(EXECUTABLE_NAME "SFML_Project")
-add_executable(${EXECUTABLE_NAME} main.cpp)
+add_executable(${EXECUTABLE_NAME} main.cpp Calculator.cpp DrawCalculator.cpp)
 
 
 # Detect and add SFML
