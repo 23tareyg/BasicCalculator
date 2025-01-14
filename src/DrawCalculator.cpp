@@ -3,15 +3,16 @@
 
 Calculator calc;
 dispMode display;
+bool wait;
 
 void DrawCalculator::drawNumpad() {
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 5; i++)
         for (int j = 0; j < 3; j++) {
             // Set constants
             float xPos = heightNumX*j;
             float yPos = (1000-heightNumY) - (heightNumY*i);
 
-            // App.draw etc
+            // Draw rectangles
             sf::RectangleShape rectangle;
             rectangle.setSize(sf::Vector2f(heightNumX, heightNumY));
             rectangle.setFillColor(sf::Color::White);
@@ -19,12 +20,12 @@ void DrawCalculator::drawNumpad() {
             rectangle.setOutlineThickness(2);
             rectangle.setPosition({xPos, yPos});
 
-
+            // Draw text
             sf::Text text;
             text.setFont(font);
             text.setFillColor(sf::Color::Blue);
             text.setCharacterSize(30);
-            text.setString("hey");
+            text.setString(numButtons.at(j + 3*i));
             text.setPosition({xPos, yPos});
 
             // draw items
@@ -33,8 +34,6 @@ void DrawCalculator::drawNumpad() {
 
         }
 }
-
-
 
 void DrawCalculator::drawOperators() {
     for (int i = 0; i < 5; i++) {
@@ -61,47 +60,35 @@ void DrawCalculator::drawOperators() {
     }
     
 }
-void DrawCalculator::drawClear() {
 
-    float xPos = 0;
-    float yPos = 1000 - (heightNumY*5);
-    sf::Text text;
-
-
-    sf::RectangleShape rectangle;
-    rectangle.setSize(sf::Vector2f(heightNumX*3, heightNumY));
-    rectangle.setFillColor(sf::Color::White);
-    rectangle.setOutlineColor(sf::Color::Green);
-    rectangle.setOutlineThickness(2);
-    rectangle.setPosition({xPos, yPos});
-
-    drawStandText(text, font, sf::Color::Blue, 30, "clear");
-    sf::FloatRect rect = text.getLocalBounds();
-    float centerX = (NUM_WIDTH*3 - rect.width) / 2.0f;
-    float centerY = ((OP_HEIGHT - rect.height) / 2.0f) + yPos;
-    text.setPosition(centerX, centerY);
-
-    App.draw(rectangle);
-    App.draw(text);
-
-}
 void DrawCalculator::drawFuncs() {
     for (int i = 0; i < 3; i++) {
+        float xPos = i*heightFunctionsX;
+        float yPos = (1000) - (heightFunctionsY*6);
+        sf::Text text;
+
         sf::RectangleShape rectangle;
         rectangle.setSize(sf::Vector2f(heightFunctionsX, heightFunctionsY));
         rectangle.setFillColor(sf::Color::White);
         rectangle.setOutlineColor(sf::Color::Green);
         rectangle.setOutlineThickness(2);
-        rectangle.setPosition({i*heightFunctionsX, (1000) - (heightFunctionsY*6)});
+        rectangle.setPosition({xPos, yPos});
 
+        drawStandText(text, font, sf::Color::Blue, 35, functions.at(i));
+        sf::FloatRect rect = text.getLocalBounds();
+        float centerX = ((FUNC_WIDTH - rect.width) / 2.0f) + xPos;
+        float centerY = ((FUNC_HEIGHT - rect.height) / 2.0f) + yPos;
+        text.setPosition(centerX, centerY);
+        
         App.draw(rectangle); 
+        App.draw(text);
     }
 }
 
 void DrawCalculator::handlePress() {
     sf::Text text;
-    // std::cout << getMouseNum(mouse.getPosition(window)) << std::endl;
     if (!calc.getMouseNum(mouse.getPosition(App)).empty() && mouse.isButtonPressed(sf::Mouse::Button::Left)) {
+        wait = true;
         if (calc.getMouseNum(mouse.getPosition(App)) == "CLEAR") {
             calc.clear();
             display = dispMode::CLEAR;
@@ -119,7 +106,6 @@ void DrawCalculator::handlePress() {
             display = dispMode::EXPR;
         }
         std::cout << calc.expression << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
 
     if (display == dispMode::ANSWER) {
@@ -131,15 +117,20 @@ void DrawCalculator::handlePress() {
     } else if (display == dispMode::ERR) {
         drawStandText(text, font, sf::Color::White, 60, "err");
     }
-
+    
     App.draw(text);
+    App.display();
+
+    if (wait) {
+        wait = false;
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    } 
 }
 
 
 void DrawCalculator::drawAll() {
     drawNumpad();
     drawOperators();
-    drawClear();
     drawFuncs();
     handlePress();
 }

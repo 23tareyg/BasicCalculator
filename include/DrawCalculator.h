@@ -27,7 +27,6 @@ public:
 
     void drawNumpad();
     void drawOperators();
-    void drawClear();
     void drawFuncs();
     void handlePress();
     void drawAll();
@@ -42,6 +41,13 @@ private:
     int heightFunctionsY = 130;
 
     std::vector<std::string> operators = {"=", "+", "-", "x", "/"};
+    std::vector<std::string> functions = {"sin", "cos", "tan"};
+    std::vector<std::string> numButtons = {"last", "0", ".",
+                                            "1", "2", "3",
+                                            "4", "5", "6",
+                                            "7", "8", "9",
+                                            "C", "(", ")"
+                                           };
 
     sf::RenderWindow& App;
     sf::Font font;

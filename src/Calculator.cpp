@@ -1,5 +1,19 @@
 #include "../include/Calculator.h"
 
+std::string tokenTypeString(TokenType t) {
+    switch (t) {
+        case TokenType::FUNCTION: 
+            return "function";
+            break;
+        case TokenType::NUMBER:
+            return "number";
+            break;
+        case TokenType::OPERATOR: 
+            return "operator";
+            break;
+    }
+}
+
 using namespace CalculatorConst;
 std::string Calculator::loadExpression() {
     return expression;
@@ -15,9 +29,9 @@ std::string temp, tempfunc;
 void Calculator::tokenize() {
     for (auto c = expression.begin(); c != expression.end(); c++) {
         // check for numbers
-        if (std::isdigit(*c)) {
+        if (std::isdigit(*c) || *c == '.') {
             temp.push_back(*c);
-            bool nextIsDigit = std::isdigit(*(c+1));
+            bool nextIsDigit = std::isdigit(*(c+1)) || *(c+1) == '.';
             if ((c+1) == expression.end() || !nextIsDigit) {
                 Token t(temp, TokenType::NUMBER);
                 tokens.push_back(t);
@@ -50,6 +64,9 @@ void Calculator::tokenize() {
             std::__throw_invalid_argument("Invalid Expression");
         }
     }
+    std::cout << "TOKENS:" << std::endl;
+    for (Token i : tokens) std::cout << i.tokenContent << " " << tokenTypeString(i.type) << std::endl;
+    std::cout << "END TOKENS" << std::endl;
 }
 
 void Calculator::shuntingYard() {
@@ -75,8 +92,9 @@ void Calculator::shuntingYard() {
         } else if (i.tokenContent[0] == '(') {
             opStack.push(i);
         } else if (i.tokenContent[0] == ')') {
+            if (opStack.empty() || opStack.top().tokenContent[0] == '(' && outputQ.empty()) throw std::__throw_logic_error;
             while (opStack.top().tokenContent[0] != '(') {
-                if (opStack.empty()) std::__throw_logic_error;
+                if (opStack.empty()) throw std::__throw_logic_error;
                 outputQ.push(opStack.top());
                 opStack.pop();
             }
@@ -91,7 +109,7 @@ void Calculator::shuntingYard() {
     }
 
     while (!opStack.empty()) {
-        assert(opStack.top().tokenContent[0] != '(');
+        if (opStack.top().tokenContent[0] == '(' || opStack.top().tokenContent[0] == ')') std::__throw_logic_error;
         Token buf = opStack.top();
         opStack.pop();
         outputQ.push(buf);
@@ -133,6 +151,7 @@ void Calculator::evaluatePostfix() {
         }
     }
 
+    if (vals.empty()) throw std::__throw_logic_error;
     ans = vals.top();
 }
 
@@ -155,16 +174,18 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
         mousePos.y <= 1000 - ((NUM_HEIGHT*4) + OP_HEIGHT) )
     {
         // mouse is at top row
-        if (mousePos.x > 0 && mousePos.x <= FUNC_WIDTH) return "sin";
-        else if (mousePos.x > FUNC_WIDTH && mousePos.x <= FUNC_WIDTH*2) return "cos";
-        else if (mousePos.x > FUNC_WIDTH*2 && mousePos.x <= FUNC_WIDTH*3) return "tan";
+        if (mousePos.x > 0 && mousePos.x <= FUNC_WIDTH) return "sin(";
+        else if (mousePos.x > FUNC_WIDTH && mousePos.x <= FUNC_WIDTH*2) return "cos(";
+        else if (mousePos.x > FUNC_WIDTH*2 && mousePos.x <= FUNC_WIDTH*3) return "tan(";
         else return "";
     } 
     else if (mousePos.y > 1000 - ((NUM_HEIGHT*4) + OP_HEIGHT) && 
                 mousePos.y <= 1000 - (NUM_HEIGHT*4)) 
     {
         // mouse is at second row from top
-        if (mousePos.x > 0 && mousePos.x <= NUM_WIDTH*3) return "CLEAR";
+        if (mousePos.x > 0 && mousePos.x <= NUM_WIDTH) return "CLEAR";
+        else if (mousePos.x > NUM_WIDTH && mousePos.x <= NUM_WIDTH*2) return "(";
+        else if (mousePos.x > NUM_WIDTH*2 && mousePos.x <= NUM_WIDTH*3) return ")";
         else if (mousePos.x <= SCREEN_WIDTH) return "/";
         else return "";
     }

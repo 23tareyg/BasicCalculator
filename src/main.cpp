@@ -5,12 +5,19 @@
 #include "../include/DrawCalculator.h"
 
 using namespace std;
+/*
+FEATURES TO CONSIDER THIS "FINISHED"
+1. [CHECK] put parenthesis blocks on screen
+2. [CHECK] fix parenthesis segfaults "()"
+3. [CHECK] add single parethesis automatically after entering in a trig function
+4. get all text centered and properly displaying
+5. implement color scheme, preferably through variables so it can be changed in only one location
+6. implement a "last" button that loads in the previous answer number
+7. fix 200ms input delay
 
-
+*/
 
 int main() {
-
-    std::string expr;
 
     sf::RenderWindow App(sf::VideoMode(600, 1000), "SFML_Project");
 
@@ -25,10 +32,11 @@ int main() {
         DrawCalculator c(App);
         c.drawAll();
 
-
         App.display();
 
+        /*Calculator c;
+        c.expression = "sin((8)+3)";
+        c.run();*/
     }
-
 
 }

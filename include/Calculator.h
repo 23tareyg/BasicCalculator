@@ -62,8 +62,8 @@ public:
     std::string getMouseNum(sf::Vector2i mousePos);
     void handlePress(sf::RenderWindow& App);
 
-private:
     std::string expression;
+private:
     std::vector<Token> tokens;
     std::queue<Token> outputQ;
     double ans = 0;
