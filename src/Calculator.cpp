@@ -205,21 +205,34 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
     else return "";
 }
 
-void Calculator::handlePress() {
+void Calculator::handlePress(sf::RenderWindow& App) {
+    sf::Text text;
+    dispMode display; 
     // std::cout << getMouseNum(mouse.getPosition(window)) << std::endl;
     if (!getMouseNum(mouse.getPosition(window)).empty() && mouse.isButtonPressed(sf::Mouse::Button::Left)) {
         if (getMouseNum(mouse.getPosition(window)) == "CLEAR") {
             expression.clear();
+            display = dispMode::CLEAR;
         } else if (getMouseNum(mouse.getPosition(window)) == "ENTER") {
             Calculator::run();
+            display = dispMode::ANSWER;
             expression.clear();
         } else {
             expression += (getMouseNum(mouse.getPosition(window)));
-            // if (!getMouseNum(mouse.getPosition(w)).empty()) std::cout << getMouseNum(mouse.getPosition(w)) << std::endl;
+            display = dispMode::EXPR;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
         std::cout << expression << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
     }
+
+    if (display == dispMode::ANSWER) {
+        drawStandText(text, font, sf::Color::Blue, 60, std::to_string(ans));
+    } else if (display == dispMode::EXPR) {
+        drawStandText(text, font, sf::Color::Blue, 60, expression);
+    } else {
+        drawStandText(text, font, sf::Color::Blue, 60, "clear");
+    }
+    App.draw(text);
 
 }
 
@@ -242,4 +255,11 @@ int getOpPrecedence(char c) {
             break;
     }
     return 0;
+}
+
+void drawStandText(sf::Text& text, sf::Font& font, sf::Color color, int size, std::string content) {
+    text.setFont(font);
+    text.setFillColor(color);
+    text.setCharacterSize(size);
+    text.setString(content);
 }

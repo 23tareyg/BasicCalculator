@@ -28,7 +28,7 @@ int main() {
         // MAIN LOGIC FOR CALCULATOR
         sf::Mouse m;
         Calculator calc(expr, App, m);
-        calc.handlePress();
+        calc.handlePress(App);
         expr = calc.loadExpression();
         
 
@@ -39,9 +39,12 @@ int main() {
        text.setFont(font);
        text.setCharacterSize(60);
        text.setString(calc.loadExpression());
-       App.draw(text);
+       //App.draw(text);
 
 
         App.display();
+
     }
+
+
 }

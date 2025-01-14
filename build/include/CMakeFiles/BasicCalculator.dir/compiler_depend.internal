@@ -255,6 +255,28 @@ include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.o
  /usr/include/c++/11/bits/std_thread.h
  /usr/include/c++/11/bits/unique_ptr.h
  /usr/include/c++/11/bits/this_thread_sleep.h
+ /usr/include/c++/11/filesystem
+ /usr/include/c++/11/bits/fs_fwd.h
+ /usr/include/c++/11/bits/fs_path.h
+ /usr/include/c++/11/locale
+ /usr/include/c++/11/bits/locale_facets_nonio.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h
+ /usr/include/libintl.h
+ /usr/include/c++/11/bits/codecvt.h
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc
+ /usr/include/c++/11/bits/locale_conv.h
+ /usr/include/c++/11/iomanip
+ /usr/include/c++/11/bits/quoted_string.h
+ /usr/include/c++/11/sstream
+ /usr/include/c++/11/bits/sstream.tcc
+ /usr/include/c++/11/codecvt
+ /usr/include/c++/11/ext/concurrence.h
+ /usr/include/c++/11/bits/shared_ptr.h
+ /usr/include/c++/11/bits/shared_ptr_base.h
+ /usr/include/c++/11/bits/allocated_ptr.h
+ /usr/include/c++/11/bits/fs_dir.h
+ /usr/include/c++/11/bits/fs_ops.h
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Window.hpp
  /usr/include/SFML/System.hpp
@@ -272,14 +294,6 @@ include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.o
  /usr/include/SFML/System/Sleep.hpp
  /usr/include/SFML/System/String.hpp
  /usr/include/SFML/System/Utf.hpp
- /usr/include/c++/11/locale
- /usr/include/c++/11/bits/locale_facets_nonio.h
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h
- /usr/include/libintl.h
- /usr/include/c++/11/bits/codecvt.h
- /usr/include/c++/11/bits/locale_facets_nonio.tcc
- /usr/include/c++/11/bits/locale_conv.h
  /usr/include/SFML/System/Utf.inl
  /usr/include/c++/11/iterator
  /usr/include/c++/11/bits/stream_iterator.h
@@ -688,6 +702,20 @@ include/CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.o
  /usr/include/c++/11/thread
  /usr/include/c++/11/bits/std_thread.h
  /usr/include/c++/11/bits/this_thread_sleep.h
+ /usr/include/c++/11/filesystem
+ /usr/include/c++/11/bits/fs_fwd.h
+ /usr/include/c++/11/bits/fs_path.h
+ /usr/include/c++/11/iomanip
+ /usr/include/c++/11/bits/quoted_string.h
+ /usr/include/c++/11/sstream
+ /usr/include/c++/11/bits/sstream.tcc
+ /usr/include/c++/11/codecvt
+ /usr/include/c++/11/ext/concurrence.h
+ /usr/include/c++/11/bits/shared_ptr.h
+ /usr/include/c++/11/bits/shared_ptr_base.h
+ /usr/include/c++/11/bits/allocated_ptr.h
+ /usr/include/c++/11/bits/fs_dir.h
+ /usr/include/c++/11/bits/fs_ops.h
  /home/tareyg/devstuff/BasicCalculator/include/Constants.h
 
 include/CMakeFiles/BasicCalculator.dir/main.cpp.o
@@ -1032,6 +1060,20 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o
  /usr/include/c++/11/thread
  /usr/include/c++/11/bits/std_thread.h
  /usr/include/c++/11/bits/this_thread_sleep.h
+ /usr/include/c++/11/filesystem
+ /usr/include/c++/11/bits/fs_fwd.h
+ /usr/include/c++/11/bits/fs_path.h
+ /usr/include/c++/11/iomanip
+ /usr/include/c++/11/bits/quoted_string.h
+ /usr/include/c++/11/sstream
+ /usr/include/c++/11/bits/sstream.tcc
+ /usr/include/c++/11/codecvt
+ /usr/include/c++/11/ext/concurrence.h
+ /usr/include/c++/11/bits/shared_ptr.h
+ /usr/include/c++/11/bits/shared_ptr_base.h
+ /usr/include/c++/11/bits/allocated_ptr.h
+ /usr/include/c++/11/bits/fs_dir.h
+ /usr/include/c++/11/bits/fs_ops.h
  /home/tareyg/devstuff/BasicCalculator/include/Constants.h
  /home/tareyg/devstuff/BasicCalculator/include/DrawCalculator.h
 

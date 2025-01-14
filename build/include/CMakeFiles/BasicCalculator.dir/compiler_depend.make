@@ -254,6 +254,28 @@ include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.o: ../src/Calculator.cpp \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Window.hpp \
   /usr/include/SFML/System.hpp \
@@ -271,14 +293,6 @@ include/CMakeFiles/BasicCalculator.dir/Calculator.cpp.o: ../src/Calculator.cpp \
   /usr/include/SFML/System/Sleep.hpp \
   /usr/include/SFML/System/String.hpp \
   /usr/include/SFML/System/Utf.hpp \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/SFML/System/Utf.inl \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/bits/stream_iterator.h \
@@ -686,6 +700,20 @@ include/CMakeFiles/BasicCalculator.dir/DrawCalculator.cpp.o: ../src/DrawCalculat
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   ../include/Constants.h
 
 include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
@@ -1029,6 +1057,20 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   ../include/Constants.h \
   ../include/DrawCalculator.h
 
@@ -1113,23 +1155,9 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SFML/System/Utf.inl:
 
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
-
 /usr/include/c++/11/map:
 
 /usr/include/SFML/System/Utf.hpp:
-
-/usr/include/libintl.h:
-
-/usr/include/SFML/System/String.hpp:
 
 /usr/include/SFML/System/Sleep.hpp:
 
@@ -1147,11 +1175,53 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/SFML/System/Export.hpp:
 
+/usr/include/SFML/Config.hpp:
+
+/usr/include/SFML/Graphics/Color.hpp:
+
+/usr/include/SFML/System.hpp:
+
+/usr/include/SFML/System/FileInputStream.hpp:
+
+/usr/include/SFML/Window.hpp:
+
+/usr/include/SFML/Graphics.hpp:
+
+/usr/include/c++/11/bits/fs_ops.h:
+
+/usr/include/c++/11/bits/fs_dir.h:
+
+/usr/include/c++/11/bits/allocated_ptr.h:
+
+/usr/include/c++/11/ext/concurrence.h:
+
+/usr/include/c++/11/sstream:
+
+/usr/include/c++/11/bits/quoted_string.h:
+
+/usr/include/c++/11/bits/locale_conv.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/usr/include/SFML/System/String.hpp:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/c++/11/bits/shared_ptr_base.h:
 
 /usr/include/c++/11/bits/basic_string.h:
 
@@ -1180,8 +1250,6 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
-
-/usr/include/SFML/Graphics.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -1225,6 +1293,8 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/usr/include/c++/11/iomanip:
+
 /usr/include/c++/11/cctype:
 
 /usr/include/SFML/System/Time.hpp:
@@ -1252,6 +1322,8 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/c++/11/bits/sstream.tcc:
 
 /usr/include/c++/11/new:
 
@@ -1383,10 +1455,6 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/ostream_insert.h:
 
-/usr/include/SFML/Graphics/Color.hpp:
-
-/usr/include/SFML/System.hpp:
-
 ../include/Constants.h:
 
 /usr/include/c++/11/ostream:
@@ -1501,6 +1569,8 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
+/usr/include/c++/11/bits/fs_path.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/alloca.h:
@@ -1569,6 +1639,8 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/stdexcept:
 
+/usr/include/c++/11/codecvt:
+
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
@@ -1606,12 +1678,6 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/vector:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
@@ -1691,6 +1757,8 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/specfun.h:
 
+/usr/include/c++/11/filesystem:
+
 /usr/include/c++/11/limits:
 
 /usr/include/c++/11/array:
@@ -1717,8 +1785,10 @@ include/CMakeFiles/BasicCalculator.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/std_thread.h:
 
-/usr/include/SFML/System/FileInputStream.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/SFML/Window.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/usr/include/SFML/Config.hpp:
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/c++/11/bits/fs_fwd.h:

@@ -8,6 +8,7 @@
 
 using namespace CalculatorConst;
 
+
 class DrawCalculator {
 public:
     DrawCalculator(int hnx, int hny, int hox, int hoy, int hfx, int hfy, sf::RenderWindow& a) : 
@@ -20,6 +21,7 @@ public:
         int heightOperatorsY = OP_HEIGHT;
         int heightFunctionsX = FUNC_WIDTH;
         int heightFunctionsY = FUNC_HEIGHT;
+        font.loadFromFile("../resources/Quen.ttf");
     }
     DrawCalculator() = default;
 
@@ -38,5 +40,8 @@ private:
     int heightFunctionsX = 200;
     int heightFunctionsY = 130;
 
+    std::vector<std::string> operators = {"=", "+", "-", "x", "/"};
+
     sf::RenderWindow& App;
+    sf::Font font;
 };

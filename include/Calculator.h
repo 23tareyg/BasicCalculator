@@ -11,6 +11,7 @@
 #include <cmath>
 #include <chrono>
 #include <thread>
+#include <filesystem>
 
 #include <SFML/Graphics.hpp>
 
@@ -22,6 +23,14 @@ enum class TokenType {
     OPERATOR,
     NUM_TOKENS
 };
+
+enum class dispMode {
+    CLEAR,
+    ANSWER,
+    EXPR,
+    NUM_MODES
+};
+
 
 class Token {
 public:
@@ -51,7 +60,7 @@ public:
     void run();
 
     std::string getMouseNum(sf::Vector2i mousePos);
-    void handlePress();
+    void handlePress(sf::RenderWindow& App);
 
 private:
     std::string expression;
@@ -64,8 +73,10 @@ private:
 
     sf::RenderWindow& window;
     sf::Mouse mouse;
+    sf::Font font;
 
 friend class DrawCalculator;
 };
 
 int getOpPrecedence(char c);
+void drawStandText(sf::Text& text, sf::Font& font, sf::Color color, int size, std::string content);
