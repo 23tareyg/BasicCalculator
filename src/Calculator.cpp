@@ -55,6 +55,7 @@ void Calculator::tokenize() {
 void Calculator::shuntingYard() {
     std::stack<Token> opStack;
 
+    if (tokens[0].type == TokenType::OPERATOR) std::__throw_logic_error;
     for (auto i : tokens) {
         if (i.type == TokenType::NUMBER) {
             outputQ.push(i);
@@ -66,7 +67,6 @@ void Calculator::shuntingYard() {
                     (getOpPrecedence(opStack.top().tokenContent[0]) == getOpPrecedence(i.tokenContent[0]) && i.tokenContent[0] != '^')
                 )
             ) 
-            // while (true && true && (false || (false && true)))
             {
                 outputQ.push(opStack.top());
                 opStack.pop();
@@ -76,11 +76,11 @@ void Calculator::shuntingYard() {
             opStack.push(i);
         } else if (i.tokenContent[0] == ')') {
             while (opStack.top().tokenContent[0] != '(') {
-                assert(!opStack.empty());
+                if (opStack.empty()) std::__throw_logic_error;
                 outputQ.push(opStack.top());
                 opStack.pop();
             }
-            assert(opStack.top().tokenContent[0] == '(');
+            if(opStack.top().tokenContent[0] != '(') throw std::__throw_logic_error;
             opStack.pop();
             if (!opStack.empty() && opStack.top().type == TokenType::FUNCTION) {
                 Token buf = opStack.top();
@@ -108,10 +108,10 @@ void Calculator::evaluatePostfix() {
         if (tok.type == TokenType::NUMBER) {
             vals.push(std::stod(tok.tokenContent));
         } else if (tok.type == TokenType::OPERATOR) {
-            assert(!vals.empty());
+            if (vals.empty()) throw std::__throw_logic_error;
             double opB = vals.top();
             vals.pop();
-            assert(!vals.empty());
+            if (vals.empty()) throw std::__throw_logic_error;
             double opA = vals.top();
             vals.pop();
 
@@ -142,6 +142,12 @@ void Calculator::run() {
     shuntingYard();
     evaluatePostfix();
     std::cout << "Answer: " << ans << std::endl;
+}
+
+void Calculator::clear() {
+    expression.clear();
+    tokens.clear();    
+    while (!outputQ.empty()) outputQ.pop();
 }
 
 std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
@@ -205,36 +211,6 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
     else return "";
 }
 
-void Calculator::handlePress(sf::RenderWindow& App) {
-    sf::Text text;
-    dispMode display; 
-    // std::cout << getMouseNum(mouse.getPosition(window)) << std::endl;
-    if (!getMouseNum(mouse.getPosition(window)).empty() && mouse.isButtonPressed(sf::Mouse::Button::Left)) {
-        if (getMouseNum(mouse.getPosition(window)) == "CLEAR") {
-            expression.clear();
-            display = dispMode::CLEAR;
-        } else if (getMouseNum(mouse.getPosition(window)) == "ENTER") {
-            Calculator::run();
-            display = dispMode::ANSWER;
-            expression.clear();
-        } else {
-            expression += (getMouseNum(mouse.getPosition(window)));
-            display = dispMode::EXPR;
-        }
-        std::cout << expression << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
-    }
-
-    if (display == dispMode::ANSWER) {
-        drawStandText(text, font, sf::Color::Blue, 60, std::to_string(ans));
-    } else if (display == dispMode::EXPR) {
-        drawStandText(text, font, sf::Color::Blue, 60, expression);
-    } else {
-        drawStandText(text, font, sf::Color::Blue, 60, "clear");
-    }
-    App.draw(text);
-
-}
 
 
 int getOpPrecedence(char c) {

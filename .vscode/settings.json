@@ -54,6 +54,9 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "filesystem": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "codecvt": "cpp",
+        "iomanip": "cpp",
+        "sstream": "cpp"
     }
 }

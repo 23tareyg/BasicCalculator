@@ -25,22 +25,6 @@ int main() {
         DrawCalculator c(App);
         c.drawAll();
 
-        // MAIN LOGIC FOR CALCULATOR
-        sf::Mouse m;
-        Calculator calc(expr, App, m);
-        calc.handlePress(App);
-        expr = calc.loadExpression();
-        
-
-       sf::Font font;
-       font.loadFromFile("../resources/Quen.ttf");
-
-       sf::Text text;
-       text.setFont(font);
-       text.setCharacterSize(60);
-       text.setString(calc.loadExpression());
-       //App.draw(text);
-
 
         App.display();
 

@@ -1,8 +1,8 @@
 #include "../include/DrawCalculator.h"
 #include "../include/Calculator.h"
 
-
-
+Calculator calc;
+dispMode display;
 
 void DrawCalculator::drawNumpad() {
     for (int i = 0; i < 4; i++)
@@ -98,11 +98,50 @@ void DrawCalculator::drawFuncs() {
     }
 }
 
+void DrawCalculator::handlePress() {
+    sf::Text text;
+    // std::cout << getMouseNum(mouse.getPosition(window)) << std::endl;
+    if (!calc.getMouseNum(mouse.getPosition(App)).empty() && mouse.isButtonPressed(sf::Mouse::Button::Left)) {
+        if (calc.getMouseNum(mouse.getPosition(App)) == "CLEAR") {
+            calc.clear();
+            display = dispMode::CLEAR;
+        } else if (calc.getMouseNum(mouse.getPosition(App)) == "ENTER") {
+            try {    
+                calc.run();
+                display = dispMode::ANSWER;
+                calc.clear();
+            } catch (...) {
+                display = dispMode::ERR;
+                calc.clear();
+            }
+    } else {
+            calc.expression += (calc.getMouseNum(mouse.getPosition(App)));
+            display = dispMode::EXPR;
+        }
+        std::cout << calc.expression << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    }
+
+    if (display == dispMode::ANSWER) {
+        drawStandText(text, font, sf::Color::White, 60, std::to_string(calc.ans));
+    } else if (display == dispMode::EXPR) {
+        drawStandText(text, font, sf::Color::White, 60, calc.expression);
+    } else if (display == dispMode::CLEAR) {
+        drawStandText(text, font, sf::Color::White, 60, "clear");
+    } else if (display == dispMode::ERR) {
+        drawStandText(text, font, sf::Color::White, 60, "err");
+    }
+
+    App.draw(text);
+}
+
+
 void DrawCalculator::drawAll() {
     drawNumpad();
     drawOperators();
     drawClear();
     drawFuncs();
+    handlePress();
 }
 
 

@@ -28,6 +28,7 @@ enum class dispMode {
     CLEAR,
     ANSWER,
     EXPR,
+    ERR,
     NUM_MODES
 };
 
@@ -48,9 +49,7 @@ friend class Calculator;
 
 class Calculator {
 public:
-    Calculator() = delete;
-    Calculator(std::string s, sf::RenderWindow& w, sf::Mouse m) : expression(s), window(w), mouse(m) {}
-    Calculator(sf::RenderWindow& w, sf::Mouse m) : window(w), mouse(m) {}
+    Calculator() {}
 
     std::string loadExpression();
     void deleteSpaces();
@@ -58,6 +57,7 @@ public:
     void shuntingYard();
     void evaluatePostfix();
     void run();
+    void clear();
 
     std::string getMouseNum(sf::Vector2i mousePos);
     void handlePress(sf::RenderWindow& App);
@@ -71,9 +71,6 @@ private:
     std::vector<char> operators = { '(', ')', '^', '+', '-', '*', '/' };
     std::vector<std::string> functions = { "sin", "cos", "tan" };
 
-    sf::RenderWindow& window;
-    sf::Mouse mouse;
-    sf::Font font;
 
 friend class DrawCalculator;
 };

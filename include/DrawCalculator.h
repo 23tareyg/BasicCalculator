@@ -29,6 +29,7 @@ public:
     void drawOperators();
     void drawClear();
     void drawFuncs();
+    void handlePress();
     void drawAll();
 
 private:
@@ -44,4 +45,6 @@ private:
 
     sf::RenderWindow& App;
     sf::Font font;
+    sf::Mouse mouse;
+
 };
