@@ -10,6 +10,11 @@ namespace CalculatorConst {
     constexpr int OP_HEIGHT = 130;
     constexpr int FUNC_WIDTH = 200;
     constexpr int FUNC_HEIGHT = 130;
-}
+
+    const sf::Color textCol(0, 0, 0);
+    const sf::Color outlineCol(183, 183, 183);
+    const sf::Color numBackgroundCol(255, 255, 255);
+    const sf::Color opBackgroundCol(205, 205, 205);
+};
 
 #endif

@@ -63,13 +63,14 @@ public:
     void handlePress(sf::RenderWindow& App);
 
     std::string expression;
+    std::string dispExpression;
 private:
     std::vector<Token> tokens;
     std::queue<Token> outputQ;
     double ans = 0;
 
     std::vector<char> operators = { '(', ')', '^', '+', '-', '*', '/' };
-    std::vector<std::string> functions = { "sin", "cos", "tan" };
+    std::vector<std::string> functions = { "sin", "cos", "tan", "neg"};
 
 
 friend class DrawCalculator;
@@ -77,3 +78,4 @@ friend class DrawCalculator;
 
 int getOpPrecedence(char c);
 void drawStandText(sf::Text& text, sf::Font& font, sf::Color color, int size, std::string content);
+double negative(double n);

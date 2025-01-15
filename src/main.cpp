@@ -13,7 +13,8 @@ FEATURES TO CONSIDER THIS "FINISHED"
 4. get all text centered and properly displaying
 5. implement color scheme, preferably through variables so it can be changed in only one location
 6. implement a "last" button that loads in the previous answer number
-7. fix 200ms input delay
+7. [CHECK] fix 200ms input delay
+8. fix functions grabbing everything after it unless parethesis
 
 */
 
@@ -35,8 +36,8 @@ int main() {
         App.display();
 
         /*Calculator c;
-        c.expression = "sin((8)+3)";
+        c.expression = "neg8+5";
         c.run();*/
     }
-
 }
+

@@ -15,16 +15,16 @@ void DrawCalculator::drawNumpad() {
             // Draw rectangles
             sf::RectangleShape rectangle;
             rectangle.setSize(sf::Vector2f(heightNumX, heightNumY));
-            rectangle.setFillColor(sf::Color::White);
-            rectangle.setOutlineColor(sf::Color::Green);
+            rectangle.setFillColor(numBackgroundCol);
+            rectangle.setOutlineColor(outlineCol);
             rectangle.setOutlineThickness(2);
             rectangle.setPosition({xPos, yPos});
 
             // Draw text
             sf::Text text;
             text.setFont(font);
-            text.setFillColor(sf::Color::Blue);
-            text.setCharacterSize(30);
+            text.setFillColor(textCol);
+            text.setCharacterSize(35);
             text.setString(numButtons.at(j + 3*i));
             text.setPosition({xPos, yPos});
 
@@ -43,13 +43,12 @@ void DrawCalculator::drawOperators() {
 
         sf::RectangleShape rectangle;
         rectangle.setSize(sf::Vector2f(OP_WIDTH, OP_HEIGHT));
-        rectangle.setFillColor(sf::Color::White);
-        rectangle.setOutlineColor(sf::Color::Green);
+        rectangle.setFillColor(opBackgroundCol);
+        rectangle.setOutlineColor(outlineCol);
         rectangle.setOutlineThickness(2);
         rectangle.setPosition({xPos, yPos});
 
-
-        drawStandText(text, font, sf::Color::Blue, 35, operators.at(i));
+        drawStandText(text, font, textCol, 35, drawableOperators.at(i));
         sf::FloatRect rect = text.getLocalBounds();
         float centerX = ((OP_WIDTH - rect.width) / 2.0f) + xPos;
         float centerY = ((OP_HEIGHT - rect.height) / 2.0f) + yPos;
@@ -70,11 +69,12 @@ void DrawCalculator::drawFuncs() {
         sf::RectangleShape rectangle;
         rectangle.setSize(sf::Vector2f(heightFunctionsX, heightFunctionsY));
         rectangle.setFillColor(sf::Color::White);
-        rectangle.setOutlineColor(sf::Color::Green);
+        rectangle.setOutlineColor(outlineCol);
         rectangle.setOutlineThickness(2);
         rectangle.setPosition({xPos, yPos});
 
-        drawStandText(text, font, sf::Color::Blue, 35, functions.at(i));
+        drawStandText(text, font, opBackgroundCol, 35, drawableFunctions.at(i));
+        text.setFillColor(textCol);
         sf::FloatRect rect = text.getLocalBounds();
         float centerX = ((FUNC_WIDTH - rect.width) / 2.0f) + xPos;
         float centerY = ((FUNC_HEIGHT - rect.height) / 2.0f) + yPos;
@@ -101,8 +101,14 @@ void DrawCalculator::handlePress() {
                 display = dispMode::ERR;
                 calc.clear();
             }
-    } else {
-            calc.expression += (calc.getMouseNum(mouse.getPosition(App)));
+        } else {
+            if (calc.getMouseNum(mouse.getPosition(App)) == "neg") {
+                calc.expression += (calc.getMouseNum(mouse.getPosition(App)));
+                calc.dispExpression += "-";
+            } else {
+                calc.expression += (calc.getMouseNum(mouse.getPosition(App)));
+                calc.dispExpression += (calc.getMouseNum(mouse.getPosition(App)));
+            }
             display = dispMode::EXPR;
         }
         std::cout << calc.expression << std::endl;
@@ -111,7 +117,7 @@ void DrawCalculator::handlePress() {
     if (display == dispMode::ANSWER) {
         drawStandText(text, font, sf::Color::White, 60, std::to_string(calc.ans));
     } else if (display == dispMode::EXPR) {
-        drawStandText(text, font, sf::Color::White, 60, calc.expression);
+        drawStandText(text, font, sf::Color::White, 60, calc.dispExpression);
     } else if (display == dispMode::CLEAR) {
         drawStandText(text, font, sf::Color::White, 60, "clear");
     } else if (display == dispMode::ERR) {

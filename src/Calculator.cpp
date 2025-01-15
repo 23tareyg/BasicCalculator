@@ -72,7 +72,7 @@ void Calculator::tokenize() {
 void Calculator::shuntingYard() {
     std::stack<Token> opStack;
 
-    if (tokens[0].type == TokenType::OPERATOR) std::__throw_logic_error;
+    if (tokens[0].type == TokenType::OPERATOR) throw std::__throw_logic_error;
     for (auto i : tokens) {
         if (i.type == TokenType::NUMBER) {
             outputQ.push(i);
@@ -80,7 +80,7 @@ void Calculator::shuntingYard() {
             opStack.push(i);
         } else if (i.type == TokenType::OPERATOR && i.tokenContent[0] != '(' && i.tokenContent[0] != ')') {
             while (!opStack.empty() && opStack.top().tokenContent != "(" && 
-                (getOpPrecedence(opStack.top().tokenContent[0]) > getOpPrecedence(i.tokenContent[0]) || 
+                (getOpPrecedence(opStack.top().tokenContent[0]) > getOpPrecedence(i.tokenContent[0]) || opStack.top().tokenContent[0] == 'n' ||
                     (getOpPrecedence(opStack.top().tokenContent[0]) == getOpPrecedence(i.tokenContent[0]) && i.tokenContent[0] != '^')
                 )
             ) 
@@ -109,7 +109,7 @@ void Calculator::shuntingYard() {
     }
 
     while (!opStack.empty()) {
-        if (opStack.top().tokenContent[0] == '(' || opStack.top().tokenContent[0] == ')') std::__throw_logic_error;
+        if (opStack.top().tokenContent[0] == '(' || opStack.top().tokenContent[0] == ')') throw std::__throw_logic_error;
         Token buf = opStack.top();
         opStack.pop();
         outputQ.push(buf);
@@ -147,7 +147,8 @@ void Calculator::evaluatePostfix() {
             if (tok.tokenContent == "sin") vals.push(sin(op));
             else if (tok.tokenContent == "cos") vals.push(cos(op));
             else if (tok.tokenContent == "tan") vals.push(tan(op));
-            else std::__throw_invalid_argument;
+            else if (tok.tokenContent == "neg") vals.push(negative(op));
+            else throw std::__throw_invalid_argument;
         }
     }
 
@@ -165,6 +166,7 @@ void Calculator::run() {
 
 void Calculator::clear() {
     expression.clear();
+    dispExpression.clear();
     tokens.clear();    
     while (!outputQ.empty()) outputQ.pop();
 }
@@ -223,7 +225,7 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
                 mousePos.y <= 1000) 
     {
         // mouse is at sixth row from top
-        if (mousePos.x > 0 && mousePos.x <= NUM_WIDTH) return "HIST";
+        if (mousePos.x > 0 && mousePos.x <= NUM_WIDTH) return "neg";
         else if (mousePos.x > NUM_WIDTH && mousePos.x <= NUM_WIDTH*2) return "0";
         else if (mousePos.x > NUM_WIDTH*2 && mousePos.x <= NUM_WIDTH*3) return ".";
         else if (mousePos.x > NUM_WIDTH*3 && mousePos.x <= SCREEN_WIDTH) return "ENTER";
@@ -236,7 +238,7 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
 
 int getOpPrecedence(char c) {
     switch (c) {
-        case '^':
+        case '^' || 'n':
             return 4;
             break;
         case '*':
@@ -260,3 +262,8 @@ void drawStandText(sf::Text& text, sf::Font& font, sf::Color color, int size, st
     text.setCharacterSize(size);
     text.setString(content);
 }
+
+double negative(double n) {
+    return n * (-1);
+}
+
