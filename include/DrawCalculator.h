@@ -11,9 +11,7 @@ using namespace CalculatorConst;
 
 class DrawCalculator {
 public:
-    DrawCalculator(int hnx, int hny, int hox, int hoy, int hfx, int hfy, sf::RenderWindow& a) : 
-        heightNumX(hnx), heightNumY(hny), heightOperatorsX(hnx), heightOperatorsY(hny),
-        heightFunctionsX(hfx), heightFunctionsY(hfy), App(a) {}
+    DrawCalculator() = delete;
     DrawCalculator(sf::RenderWindow& a) : App(a) {
         int heightNumX = NUM_WIDTH;
         int heightNumY = NUM_HEIGHT;
@@ -23,7 +21,6 @@ public:
         int heightFunctionsY = FUNC_HEIGHT;
         font.loadFromFile("../resources/Quen.ttf");
     }
-    DrawCalculator() = default;
 
     void drawNumpad();
     void drawOperators();
@@ -52,5 +49,4 @@ private:
     sf::RenderWindow& App;
     sf::Font font;
     sf::Mouse mouse;
-
 };

@@ -1,31 +1,22 @@
 #include "../include/Calculator.h"
 
-std::string tokenTypeString(TokenType t) {
-    switch (t) {
-        case TokenType::FUNCTION: 
-            return "function";
-            break;
-        case TokenType::NUMBER:
-            return "number";
-            break;
-        case TokenType::OPERATOR: 
-            return "operator";
-            break;
-    }
-}
-
 using namespace CalculatorConst;
+
+// Helper variables
+std::string temp, tempfunc;
+
 std::string Calculator::loadExpression() {
     return expression;
 }
 
+// Only necessary for command line input
 void Calculator::deleteSpaces() {
     for (auto i = expression.begin(); i != expression.end(); i++) {
         if (*i == ' ') expression.erase(i);
     }
 }
 
-std::string temp, tempfunc;
+// Take string and convert to vector of Tokens
 void Calculator::tokenize() {
     for (auto c = expression.begin(); c != expression.end(); c++) {
         // check for numbers
@@ -38,7 +29,7 @@ void Calculator::tokenize() {
                 temp.clear();
             }
         }
-
+        
         // check for operators
         else if (std::find(operators.begin(), operators.end(), *c) != operators.end()) {
             Token t(*c, TokenType::OPERATOR);
@@ -69,6 +60,7 @@ void Calculator::tokenize() {
     std::cout << "END TOKENS" << std::endl;
 }
 
+// Take vector of Tokens and convert to postfix
 void Calculator::shuntingYard() {
     std::stack<Token> opStack;
 
@@ -116,6 +108,7 @@ void Calculator::shuntingYard() {
     }
 }
 
+// Evaluate postfix Tokens and store in variable ans
 void Calculator::evaluatePostfix() {
     std::stack<double> vals;
 
@@ -156,6 +149,7 @@ void Calculator::evaluatePostfix() {
     ans = vals.top();
 }
 
+// Run all necessary functions
 void Calculator::run() {
     deleteSpaces();
     tokenize();
@@ -164,10 +158,11 @@ void Calculator::run() {
     std::cout << "Answer: " << ans << std::endl;
 }
 
+// Clear all stacks, queues, and strings
 void Calculator::clear() {
     expression.clear();
     dispExpression.clear();
-    tokens.clear();    
+    tokens.clear();
     while (!outputQ.empty()) outputQ.pop();
 }
 
@@ -234,8 +229,6 @@ std::string Calculator::getMouseNum(sf::Vector2i mousePos) {
     else return "";
 }
 
-
-
 int getOpPrecedence(char c) {
     switch (c) {
         case '^' || 'n':
@@ -267,3 +260,17 @@ double negative(double n) {
     return n * (-1);
 }
 
+std::string tokenTypeString(TokenType t) {
+    switch (t) {
+        case TokenType::FUNCTION: 
+            return "function";
+            break;
+        case TokenType::NUMBER:
+            return "number";
+            break;
+        case TokenType::OPERATOR: 
+            return "operator";
+            break;
+        default: return "";
+    }
+}

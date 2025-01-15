@@ -5,6 +5,7 @@ Calculator calc;
 dispMode display;
 bool wait;
 
+// Draw the numpad and the row above it which includes clear and parenthesis
 void DrawCalculator::drawNumpad() {
     for (int i = 0; i < 5; i++)
         for (int j = 0; j < 3; j++) {
@@ -31,10 +32,10 @@ void DrawCalculator::drawNumpad() {
             // draw items
             App.draw(rectangle);
             App.draw(text);
-
         }
 }
 
+// Draw the column of operators on the right side
 void DrawCalculator::drawOperators() {
     for (int i = 0; i < 5; i++) {
         float xPos = 390;
@@ -60,6 +61,7 @@ void DrawCalculator::drawOperators() {
     
 }
 
+// Draw the row of functions at the top
 void DrawCalculator::drawFuncs() {
     for (int i = 0; i < 3; i++) {
         float xPos = i*heightFunctionsX;
@@ -85,15 +87,21 @@ void DrawCalculator::drawFuncs() {
     }
 }
 
+// Handle the click behavior
 void DrawCalculator::handlePress() {
     sf::Text text;
+
+    // if the mouse is pressed inside the bounds of the screen
     if (!calc.getMouseNum(mouse.getPosition(App)).empty() && mouse.isButtonPressed(sf::Mouse::Button::Left)) {
         wait = true;
+
+        // check position of the mouse when clicked and act accordingly
         if (calc.getMouseNum(mouse.getPosition(App)) == "CLEAR") {
             calc.clear();
             display = dispMode::CLEAR;
         } else if (calc.getMouseNum(mouse.getPosition(App)) == "ENTER") {
-            try {    
+            // try catch loop to deal with invalid inputs
+            try { 
                 calc.run();
                 display = dispMode::ANSWER;
                 calc.clear();
@@ -114,6 +122,7 @@ void DrawCalculator::handlePress() {
         std::cout << calc.expression << std::endl;
     }
 
+    // handle drawing the expression at the top; display is changed above
     if (display == dispMode::ANSWER) {
         drawStandText(text, font, sf::Color::White, 60, std::to_string(calc.ans));
     } else if (display == dispMode::EXPR) {
@@ -124,9 +133,12 @@ void DrawCalculator::handlePress() {
         drawStandText(text, font, sf::Color::White, 60, "err");
     }
     
+    // draw and display text
+    // might be a better way to do this, because you are calling display() here and in main
     App.draw(text);
     App.display();
 
+    // wait 200ms to avoid repeated clicks
     if (wait) {
         wait = false;
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
